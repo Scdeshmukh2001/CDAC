@@ -1,22 +1,38 @@
-package com.example.discountcalculation;
+package com.example.compoundinterest;
+
+import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
-        DiscountCalculatorUtil util = new DiscountCalculatorUtil();
+        CompoundInterestCalculatorUtil util = new CompoundInterestCalculatorUtil();
+        CompoundInterestCalculator calculator = null;
+        Scanner scanner = new Scanner(System.in);
+
         while (true) {
             util.menuList();
-            System.out.print("Choose an option: ");
-            int choice = util.scanner.nextInt();
-            util.scanner.nextLine(); // Consume the newline character
-            if (choice == 1) {
-                DiscountCalculator discountCalculator = util.acceptRecord();
-                util.printRecord(discountCalculator);
-            } else if (choice == 2) {
-                System.out.println("Exiting...");
-                break;
-            } else {
-                System.out.println("Invalid choice. Please try again.");
+            System.out.print("Enter your choice: ");
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    calculator = util.acceptRecord();
+                    break;
+                case 2:
+                    if (calculator != null) {
+                        util.printRecord(calculator);
+                    } else {
+                        System.out.println("No record found. Please accept a record first.");
+                    }
+                    break;
+                case 3:
+                    System.out.println("Exiting...");
+                    scanner.close();
+                    return;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
             }
         }
     }
 }
+
+
