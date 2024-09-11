@@ -1,21 +1,16 @@
-package com.example.toolboothcalculation;
-
+package com.example.bmicalculator;
 public class Program {
     public static void main(String[] args) {
-        TollBoothRevenueManagerUtil util = new TollBoothRevenueManagerUtil();
-        TollBoothRevenueManager manager = new TollBoothRevenueManager(50.0, 100.0, 30.0);
+        BMITrackerUtil util = new BMITrackerUtil();
         while (true) {
             util.menuList();
             System.out.print("Choose an option: ");
             int choice = util.scanner.nextInt();
             util.scanner.nextLine(); // Consume the newline character
             if (choice == 1) {
-                util.acceptTollRates(manager);
+                BMITracker bmiTracker = util.acceptRecord();
+                util.printRecord(bmiTracker);
             } else if (choice == 2) {
-                util.acceptVehicleCounts(manager);
-            } else if (choice == 3) {
-                util.printRecord(manager);
-            } else if (choice == 4) {
                 System.out.println("Exiting...");
                 break;
             } else {
