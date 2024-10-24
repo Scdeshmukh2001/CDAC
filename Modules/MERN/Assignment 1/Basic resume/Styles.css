@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #ddd;
+}
+
+.contact-info {
+    font-size: 14px;
+    color: #555;
+}
+
+.summary, .education, .skills, .languages {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Grey background for section titles */
+.experience h2, .education h2, .skills h2, .languages h2 {
+    background-color: #e0e0e0; /* Grey background for the section titles */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+
+
+ul {
+    padding-left: 20px;
+}
+
+.section-title {
+    font-weight: bold;
+}
