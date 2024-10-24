@@ -1,0 +1,110 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+.header {
+    background-color: #e67e22; /* Orange color */
+    padding: 20px;
+    text-align: left;
+    color: white;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.header h2 {
+    font-size: 18px;
+    margin: 5px 0 0;
+}
+
+/* Main content layout */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.left-column {
+    width: 65%;
+    padding-right: 20px;
+}
+
+.right-column {
+    width: 35%;
+}
+
+/* Section headings */
+h3 {
+    font-size: 18px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Job entries */
+.job {
+    margin-bottom: 20px;
+}
+
+.job p {
+    margin: 0;
+}
+
+.job .date {
+    float: right;
+}
+
+/* Skills and languages */
+.skills ul, .languages ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills ul li, .languages ul li {
+    background: #f4f4f4;
+    margin-bottom: 5px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* Personal info box */
+.personal-info {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.personal-info p {
+    margin: 10px 0;
+}
+.header {
+    position: relative; /* Make header a positioned element */
+}
+
+.profile-photo {
+    position: absolute; /* Position the photo absolutely */
+    top: 10px; /* Adjust distance from top */
+    right: 10px; /* Adjust distance from right */
+    width: 150px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: makes the image circular */
+}
