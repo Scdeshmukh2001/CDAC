@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('BG.jpg'); /* Replace with your image file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for the entire Contact Us page */
+.contact-container {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Left section (contact info) */
+.contact-info {
+    background-color: #3743ab;
+    color: white;
+    padding: 40px;
+    width: 40%;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Right section (contact form) */
+.contact-form {
+    padding: 40px;
+    width: 60%;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4e7eff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #2e5dd7;
+}
