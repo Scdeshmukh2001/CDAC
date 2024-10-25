@@ -1,0 +1,359 @@
+/* Reset basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f4f4f4; /* Fallback color */
+  background-image: url('AUS2023.jpg'); /* Path to your background image */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repetition */
+}
+
+/* Other existing CSS styles remain unchanged */
+
+  
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  background-color: #0033a0;
+  color: white;
+}
+
+.header .logo img {
+  width: 100px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 0.5em;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Main content container to center content */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+/* Hero section styles */
+.hero-section {
+  text-align: center;
+  background-image: url('images/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.hero-section h2 {
+  font-size: 1.8em;
+}
+
+/* News Section */
+.news-section {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.news-card {
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 1 1 30%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.news-card img {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 0.5em;
+}
+
+.news-card h4 {
+  color: #0033a0;
+  font-size: 1em;
+  margin: 0.5em 0;
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #0033a0;
+  color: white;
+  margin-top: 1em;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Slider Section */
+.slider-section {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.slider {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-images img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin: 0 5px;
+}
+
+/* Navigation Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.slider-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Marquee scrolling effect */
+.marquee {
+  display: flex;
+  overflow: hidden;
+  gap: 1em;
+  animation: scroll 15s linear infinite;
+}
+
+.news-card {
+  min-width: 300px; /* Ensures cards stay a consistent size */
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* Authentication Buttons */
+.auth-btn {
+  color: white;
+  background-color: #0033a0;
+  border: none;
+  padding: 0.5em 1em;
+  margin-left: 0.5em;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.auth-btn:hover {
+  background-color: #002080;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal:target {
+  display: flex;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2em;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+  color: #0033a0;
+}
+
+.modal-content label {
+  display: block;
+  text-align: left;
+  margin: 0.5em 0 0.2em;
+}
+
+.modal-content input[type="email"],
+.modal-content input[type="password"] {
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  width: 100%;
+  padding: 0.7em;
+  background-color: #0033a0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #002080;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  color: #333;
+  text-decoration: none;
+}
+/* Authentication Buttons */
+.auth-btn {
+  color: white;
+  background-color: #0033a0;
+  border: none;
+  padding: 0.5em 1em;
+  margin-left: 0.5em;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.auth-btn:hover {
+  background-color: #002080;
+  transform: scale(1.05);
+}
+
+/* Modal Button Hover Effect */
+.modal-content button {
+  width: 100%;
+  padding: 0.7em;
+  background-color: #0033a0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #002080;
+  transform: scale(1.05);
+}
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Button Styling */
+.dropbtn {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em;
+  font-weight: bold;
+}
+
+/* Dropdown Content - Hidden by Default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1;
+}
+
+/* Dropdown Content Links */
+.dropdown-content a {
+  color: #0033a0;
+  padding: 0.8em 1em;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+}
+
+/* Hover Effect on Dropdown Links */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Dropdown Button Hover Effect */
+.dropdown:hover .dropbtn {
+  text-decoration: underline;
+}
