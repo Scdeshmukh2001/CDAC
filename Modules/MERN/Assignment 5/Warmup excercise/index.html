@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warmup excercise</title>
+</head>
+<h1>Promise warmup excercise</h1>
+<body>
+    <script>
+        console.log("Program started");
+        const mypromise = new Promise((resolve, reject) => {
+           setTimeout(()  => {
+           resolve();
+           },7000)
+           });
+        
+           console.log(mypromise);
+           console.log("Program is in progress");
+
+           mypromise.then(() => {
+            console.log("Program Complete");
+           } );
+
+    </script>
+</body>
+</html>
