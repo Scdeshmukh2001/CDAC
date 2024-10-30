@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercise 1</title>
+</head>
+<body>
+    <h1>Promise Excercise 1</h1>
+    <script>
+        console.log("Program started");
+
+        const mypromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve();
+                
+            }, 3000);
+            setTimeout(() => {
+                reject();
+            }, 2000);
+        })
+
+        console.log(mypromise);
+        console.log("Program is in progress.....");
+
+        mypromise.then(() => {
+            console.log("Promise fulfilled");
+        }).catch(() => {
+            console.log("Program failiue");
+        });
+    </script>
+    
+</body>
+</html>
